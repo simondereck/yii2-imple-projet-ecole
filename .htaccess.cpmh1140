@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule (.*) https://www.iplme.org/iplme/web/ [R=301,L]
+

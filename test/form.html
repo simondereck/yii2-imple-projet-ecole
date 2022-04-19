@@ -1,0 +1,233 @@
+<form name="selectionForm" id="form2" method="POST" action="/eAppointmentpref94/step3ScenarioThree.do">
+
+
+    <input type="hidden" name="minDateForAvailability" value="" id="minDateForAvailabilityId">
+    <input type="hidden" name="maxDateForAvailability" value="" id="maxDateForAvailabilityId">
+    <input type="hidden" name="previousValueId" value="false" id="previousValueId">
+    <input type="hidden" name="ISiteBeanLib" value="" id="ISiteBeanLibId">
+    <input type="hidden" name="serviceBeanLib" value="" id="serviceBeanLibId">
+    <input type="hidden" name="preSelectedSiteKey" value="P941" id="preSelectedSiteKeyID">
+    <input type="hidden" name="dayValueIso" value="" id="dayValueIsoID">
+    <input type="hidden" id="monthsBundleValueID" value="Janvier;Février;Mars;Avril;Mai;Juin;Juillet;Août;Septembre;Octobre;Novembre;Décembre">
+    <input type="hidden" id="monthsAbrevBundleValueID" value="Jan;Fev;Mar;Avr;Mai;Juin;Juil;Aoû;Sep;Oct;Nov;Dec">
+    <input type="hidden" id="daysBundleValueID" value="D;L;M;Me;J;V;S">
+
+    <div class="generalInformationContainerWithMotive" id="generalInformationContainerId">
+        <fieldset class="notionSelectionContainerFieldSet">
+            <legend class="notionSelectionContainerLegend">Choisissez la date (cliquez sur le calendrier).</legend>
+            <div id="containerFieldSetId" class="containerFieldSet">
+                <div id="notionSelectionContainer">
+
+                    <div class="selection_organization" id="organizationBlockDivId" style="display: none;">
+                        <div class="label">Organisation*
+                        </div>
+                        <select name="organzationBeanKey" onchange="onOrganizationChanged();" id="organzationBeanKeySelect" class="field"><option value="">Choisissez...</option></select>
+                        <div class="error">
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="idServiceBlock" class="selection_service" style="visibility: hidden; display: none;">
+
+
+                        <input type="hidden" name="ISiteBeanKey" value="" id="ISiteBeanKeySelect">
+                        <!--	</div> -->
+
+
+                        <div class="label">Service*
+                        </div>
+                        <select name="serviceBeanKey" onchange="javascript:noServiceWithResaMsg=true;onServiceChanged();onServiceChangedInactivation();" id="serviceBeanKeySelect" class="field"><option value="">Choisissez...</option><option value="910">ET-RDV ETUDIANT</option></select>
+                        <div class="error">
+
+                        </div>
+                    </div>
+                    <div class="error">
+                        <span id="serviceBeanKeySelectError"></span>
+                    </div>
+
+                </div>
+
+                <div class="breackLine"></div>
+                <div class="selection_date">
+
+                    <div class="label">Choix de la date
+                    </div>
+                    <div class="dayValue_container">
+                        <input type="text" name="dayValue" value="" onclick="openJqueryCal(true);" onchange="onDayChanged();" onfocus="dayValue.blur();" id="dayValueId" class="field hasDatepicker" disabled="">
+                    </div>
+                    <div class="img_calendar_container">
+                        <a id="anchorCal" style="position: relative; visibility: hidden;" href="#" onclick="javascript:openJqueryCal(true);">
+                            <div id="calendarImgId" title="Ouvrir le calendrier">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="error">
+
+                    </div>
+                </div>
+
+
+                <div class="selection_time">
+
+                    <div class="label">A partir de
+                    </div>
+                    <select name="hourValue" tabindex="21" onchange="disableButtons();onHourChanged();" id="hourValueSelect" style="float: left;" class="field" disabled=""><option value="" selected="selected">Choisissez...</option></select>
+                </div>
+                <div class="error_hour">
+
+                </div>
+            </div>
+        </fieldset>
+        <div id="availabilityContainerId" style="width: 100%; display: none;">
+            <!-- /appointment-app/element/jsp/availability.jsp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script type="text/javascript">
+                var legendTitle = "Choix d'une heure";
+            </script>
+            <script type="text/javascript" src="/eAppointmentpref94/element/javascript/availibilities-managment.js"></script>
+
+
+
+            <div id="pane1">
+                <div id="availabilityFieldsetContainerId">
+                    <div class="error">
+
+                    </div>
+                    <fieldset class="availabilityFieldSet"><legend class="legendAvailabilities">Choix d'une heure</legend>
+                        <div class="fieldsetSubContainAvailabilities">
+                            <div id="availabityFieldContainerId">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="error">
+            <label id="errorId">
+
+            </label>
+        </div>
+    </div>
+
+    <div class="generalInformationSummary">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- JSP inclus pour l'affichage du résumés à partir de la page des motifs. -->
+
+
+
+
+
+
+
+
+
+        <div class="summaryTitle">Résumé : </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="summaryTitleContainerId" class="summaryOrgaSiteContainer">
+            <div class="subTitleSummary">
+                <label id="titleSummaryId"> Rendez-vous au</label>
+            </div>
+
+            <div class="summarySiteInfo">
+                <div id="summarySiteNameId"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="summaryMotiveTitle">Motif du rendez-vous
+            :
+        </div>
+        <div class="summaryMotiveInfo">
+
+            <div class="summaryMotiveDetail">
+                Renouvellement étudiant : 1</div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</form>

@@ -1,0 +1,74 @@
+#neguela-top-canvas{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#neguela-bottom-canvas{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#neguela-show-area{
+    background: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.neguela-img-content{
+    width: 300px;
+    position: relative;
+    height: 300px;
+}
+
+.neguela-cut-image{
+    display: flex;
+    padding: 20px;
+    background: whitesmoke;
+    position: relative;
+}
+
+#neguela-imageShow{
+    width: 600px;
+    height: 300px;
+    display: none;
+}
+
+.neguela-button-group{
+    /*width: 300px;*/
+    /*margin-top: 5px;*/
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 4px;
+    border-bottom: whitesmoke dashed 1px;
+}
+
+.neguela-button-group-item{
+    margin-bottom: 10px;
+}
+
+.neguela-button-group-item label{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.neguela-button-group span{
+    margin-left: 3px;
+}
+
+.neguela-show-button-group{
+    margin-left: 30px;
+}
+
+#imageUpload{
+    display: none;
+}
